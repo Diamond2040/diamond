@@ -1,0 +1,35 @@
+@import '../../../style/vars.less';
+
+.rate-table {
+  width: 100%;
+
+  th, td {
+    text-align: center;
+  }
+
+  tbody {
+    .ant-select {
+      width: 200px;
+    }
+  }
+
+  .ant-input-number {
+    width: 200px;
+  }
+
+  button {
+    margin-left: 66%;
+    margin-top: 25px;
+  }
+}
+
+@media screen and (max-width: @mobile-screen) {
+  .rate-table .ant-input-number {
+    width: 100px;
+  }
+
+  .rate-table button {
+    margin: 0px;
+    margin-top: 15px;
+  }
+}

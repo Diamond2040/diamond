@@ -1,0 +1,41 @@
+@import '../../../style/vars.less';
+
+// .card-title {
+//     color: black;
+//      font-size: 1.2rem;
+//      font-weight: 700;
+//      line-height: 1.5rem;
+//      padding-bottom: 8px;
+//      padding-top: 6px;
+//   }
+.profile-rates {
+    margin-bottom: 20px;
+    table {
+        border-radius: 5px;
+        background: @black;
+        width: 100%;
+        thead {
+            border-radius: 10px 10px 0px 0px !important;
+            background: #64470b;
+            color: @white;
+            height: 40px;
+        }
+        tbody {
+            text-align: center;
+            tr {
+                border: 1px solid #666;
+                height: 40px;
+                td {
+                  width: 250px;
+                  color: @white;
+                  span {
+                      color: #666;
+                  }
+                }
+                .included-extra {
+                    color: #666;
+                }
+            }
+        }
+    }
+}

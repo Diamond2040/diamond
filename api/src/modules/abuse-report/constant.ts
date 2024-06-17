@@ -1,0 +1,29 @@
+// eslint-disable-next-line no-shadow
+export enum ABUSE_REPORT_CATEGORIES {
+  ADVERTISING = 'advertising',
+  ABUSIVE = 'abusive',
+  INTOXICATED = 'intoxicated',
+  OFFLINE_PAYMENTS = 'offline_payments',
+  OTHER = 'other'
+}
+
+// eslint-disable-next-line no-shadow
+export enum ABUSE_REPORT_TYPES {
+  CHAT = 'chat',
+  VIDEO = 'video',
+  MODEL = 'model'
+}
+
+export const ABUSE_REPORT_CATEGORY_LIST = [
+  ABUSE_REPORT_CATEGORIES.ABUSIVE,
+  ABUSE_REPORT_CATEGORIES.ADVERTISING,
+  ABUSE_REPORT_CATEGORIES.INTOXICATED,
+  ABUSE_REPORT_CATEGORIES.OFFLINE_PAYMENTS,
+  ABUSE_REPORT_CATEGORIES.OTHER
+];
+
+export const ABUSE_REPORT_TYPE_LIST = [
+  ABUSE_REPORT_TYPES.CHAT,
+  ABUSE_REPORT_TYPES.VIDEO,
+  ABUSE_REPORT_TYPES.MODEL
+];

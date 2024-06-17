@@ -1,0 +1,21 @@
+@import '../../../style/vars.less';
+
+.conversation-list {
+  padding: 20px 0;
+  width: 100%;
+  height: calc(100% + 50px);
+  background-color: @theme-color;
+
+  .user-bl {
+    color: @secondary-color;
+    font-size: 20px;
+    text-align: center;
+  }
+  .c-list-item {
+    height: calc(100% - 101px);
+    overflow: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

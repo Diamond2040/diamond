@@ -1,0 +1,18 @@
+export const SUBSCRIPTION_TYPE = {
+  SINGLE: 'single',
+  RECURRING: 'recurring',
+  SYSTEM: 'system'
+};
+
+export const SUBSCRIPTION_STATUS = {
+  ACTIVE: 'active',
+  DEACTIVATED: 'deactivated'
+};
+
+export const PACKAGE_MEMBER_TYPE = {
+  BASIC: 'basic',
+  PREMIUM: 'premium'
+};
+
+export const UPDATE_PERFORMER_SUBSCRIPTION_CHANNEL = 'UPDATE_PERFORMER_SUBSCRIPTION_CHANNEL';
+export const CANCEL_PERFORMER_SUBSCRIPTION_CHANNEL = 'CANCEL_PERFORMER_SUBSCRIPTION_CHANNEL';

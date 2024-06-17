@@ -1,0 +1,71 @@
+@import '../../../style/vars.less';
+
+.form-container {
+  border-radius: 10px;
+  margin-bottom: 20px;
+
+  table {
+    width: 100%;
+    border-radius: 0px 0px 10px 10px;
+    background-color: black;
+
+    thead {
+      border-radius: 10px 10px 0px 0px !important;
+      background: #64470b;
+      color: @white;
+      height: 40px;
+      tr {
+        border-radius: 10px 10px 0px 0px !important;
+        // th {
+        //   border-top-left-radius: 10px;
+        // }
+      }
+    }
+
+    tbody {
+      text-align: center;
+      tr {
+        height: 60px;
+        border: 1px solid #666;
+
+        td {
+          width: 250px;
+          color: @white;
+          .ant-select {
+            width: 170px;
+            .ant-select-arrow {
+              color: @white;
+            }
+          }
+        }
+  
+        .ant-input-number {
+          width: 200px;
+          border-radius: 3px;
+          background: #242424;
+          border-color: #242424;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: @mobile-screen) {
+  .form-container table tbody tr td .ant-select {
+    width: 70px;
+  }
+  .form-container table tbody tr .currency {
+    text-align: end;
+    width: auto;
+  }
+  .ant-row .ant-col .ant-input-number {
+    margin: 0px;
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: @tablet-screen) {
+  .form-container table tbody tr .ant-input-number {
+    width: 160px;
+  }
+}

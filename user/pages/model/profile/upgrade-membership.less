@@ -1,0 +1,41 @@
+@import '../../../style/vars.less';
+
+.membership-container {
+  .form-container {
+    margin-top: 20px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+    .packages-li {
+      .title-package {
+        text-align: center;
+        color: @primary-color;
+        font-weight: bold;
+      }
+    }
+  }
+  .params {
+    column-rule: 1px solid #ddd;
+
+    p {
+      display: flex;
+      flex-wrap: wrap;
+
+      span {
+        flex-basis: 180px;
+        flex-grow: 0;
+        flex-shrink: 0;
+        color: #acacac;
+      }
+
+      strong {
+        font-weight: 400;
+        color: #fff;
+      }
+    }
+  }
+  .btn-cancel-membership {
+    color: #acacac;
+  }
+}

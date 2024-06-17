@@ -1,0 +1,19 @@
+@import '../../../style/vars.less';
+
+
+.video-popup-modal {
+  .ant-modal-content {
+    background: none;
+    .ant-modal-header {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: @mobile-screen) {
+  .ant-modal-body {
+    iframe {
+      width: 380px;
+    }
+  }
+}

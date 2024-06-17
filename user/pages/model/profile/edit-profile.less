@@ -1,0 +1,82 @@
+@import '../../../style/vars.less';
+
+.ant-select-selection-item {
+  margin: auto;
+}
+.btn-submit {
+  margin: 0px !important;
+  background: @primary-color !important;
+  width: 100%;
+  color: black !important;
+  font-weight: 600;
+  margin-top: 10px !important;
+  border-color: @primary-color;
+}
+
+#nest-messages {
+  background-color: @black;
+  border-radius: 5px;
+  min-height: 400px;
+  .ant-row {
+    margin: 0px;
+    padding: 10px;
+    .ctl-input-password {
+      border-radius: 5px;
+      background-color: @main-background-color;
+    }
+    .ant-input {
+      background-color: @main-background-color;
+    }
+  }
+}
+.ant-table {
+  .anticon-delete {
+    color: @black;
+    svg {
+      font-size: medium;
+    }
+  }
+}
+
+@media screen and (max-width: @mobile-screen) {
+  .model-edit-profile-layout {
+    margin-top: 70px;
+    .ant-row {
+      margin: 0 !important;
+      display: block;
+      .ant-col {
+        display: contents;
+        .ant-tabs-nav-wrap {
+          margin-left: 10px;
+        }
+        .ant-btn {
+          margin: 5px 0px;
+          background: yellow;
+          color: black;
+        }
+        .related {
+          width: 90%;
+          margin-left: 5%;
+        }
+        .ant-select {
+          .ant-select-arrow {
+            color: #666;
+          }
+        }
+        .ant-input-number {
+          width: 80%;
+          margin-bottom: 10px;
+        }
+        .view-profile {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: @tablet-screen) {
+  .ant-tabs > .ant-tabs-nav .ant-tabs-nav-list {
+      margin-left: 10px;
+  }
+}

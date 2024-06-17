@@ -1,0 +1,114 @@
+@import '../../../style/vars.less';
+
+.text-at-the-top {
+  font-size: medium;
+  padding: 15px;
+  text-align: center;
+}
+
+.booking-calendar {
+  max-width: 860px;
+  margin: auto;
+  background: @dark-gray3;
+  .ant-picker-calendar-mode-switch {
+    display: none;
+  }
+}
+
+.ant-picker-calendar-header {
+  margin-right: 10px;
+}
+
+.ant-select-arrow {
+  color: @white;
+}
+
+.ant-picker-calendar-date-content {
+  ul.events {
+    padding: 0;
+    max-height: 100%;
+    overflow: auto;
+    margin: 0;
+
+    li {
+      padding-left: 10px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      position: relative;
+
+      &::before {
+        content: '';
+        width: 5px;
+        height: 5px;
+        position: absolute;
+        left: 0;
+        top: 7px;
+        border-radius: 50%;
+      }
+
+      &.success {
+        &::before {
+          background-color: @success-color;
+        }
+      }
+
+      &.error {
+        &::before {
+          background-color: @highlight-color;
+        }
+      }
+    }
+  }
+}
+
+.ant-picker-cell-in-view:not(.ant-picker-cell-disabled) > .ant-picker-cell-inner {
+  border-color: #eebd22 !important;
+}
+
+.ant-picker-cell-in-view.ant-picker-cell-disabled > .ant-picker-cell-inner {
+  cursor: not-allowed;
+  pointer-events: auto;
+}
+
+.model-booking-modal-wrapper {
+  .ant-modal-content {
+    background: @white !important;
+    .ant-btn {
+      border-color: @main-background-color;
+    }
+    .anticon-ellipsis {
+      display: none;
+    }
+    .btn-mobile {
+      display: none;
+    }
+
+    .ant-input-number, .ant-input {
+      background-color: transparent !important;
+      border: 1px solid #d9d9d9;
+      color: black;
+    }
+
+    input {
+      color: black;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .ant-modal-content {
+      .ant-row {
+        .ant-col {
+          display: block;
+          .btn-desktop {
+            display: none;
+          }
+          .btn-mobile,
+          .anticon-more {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

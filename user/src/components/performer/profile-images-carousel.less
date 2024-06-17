@@ -1,0 +1,120 @@
+  .profile-carousel {
+    display: flex;
+    flex-direction: column;
+
+    .carousel-main {
+      // max-height: 500px;
+      overflow: hidden;
+      flex: 1;
+
+      .slick-slide {
+        // display: none;
+        float: left;
+        height: auto;
+        min-height: 1px;
+        line-height: 0px;
+
+        img {
+          max-width: 100%;
+          border-radius: 5px;
+        }
+
+        .content-inner {
+          display: flex!important;
+          width: 100%;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          .click-to-enlarge {
+            position: absolute;
+            font-size: 18px;
+            color: white;
+            display: none;
+          }
+
+          &:hover {
+            .click-to-enlarge {
+              display: block;
+            }
+          }
+        }
+      }
+
+      .slick-arrow {
+        background-color: transparent !important;
+
+        &.slick-next {
+          right: 5px;
+          z-index: 1 !important;
+
+          &::before {
+            background-size: 30px;
+            width: 40px;
+            height: 40px;
+          }
+        }
+
+        &.slick-prev {
+          left: 2px;
+          z-index: 1 !important;
+
+          &::before {
+            background-size: 30px;
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+    }
+
+    .carousel-thumbs {
+      background: @black;
+      border: 3px solid #464646;
+      border-radius: 5px;
+      .ant-carousel .slick-slider {
+        padding: 0 50px;
+        padding: 0px 50px;
+        .slick-slide {
+          height: 120px !important;
+          line-height: 30px !important;
+          .ant-image {
+            margin: 5px;
+            img {
+              width: 25%;
+              object-fit: cover;
+            }
+          }
+        }
+        .slick-arrow {
+          top: 50%;
+    
+          &.slick-next {
+            right: 10px;
+            background-color: transparent!important;
+            color: @white;
+            padding: 0;
+            &.anticon svg {
+              font-size: 20px;
+            }
+            &::before {
+              display: none;
+            }
+          }
+    
+          &.slick-prev {
+            left: 10px;
+            background-color: transparent!important;
+            color: @white;
+            padding: 0;
+            &.anticon svg {
+              font-size: 20px;
+            }
+            &::before {
+            display: none;
+            }
+          }
+        }
+      }
+    }
+
+  }

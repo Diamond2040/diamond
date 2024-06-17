@@ -1,0 +1,43 @@
+@import '../../style/vars.less';
+
+.contact-content {
+  padding: 20px 5px;
+  white-space: pre-line;
+  color: @primary-color;
+}
+.contact-form {
+  padding: 20px 5px;
+  max-width: 500px;
+  margin: auto;
+  .text-center{
+    color: @primary-color;
+    padding: 0;
+    margin: 0;
+    text-align: start;
+  }
+  .ant-form-item {
+    .ant-form-item-control-input {
+      margin-bottom: 5px;
+      .ant-input {
+        background-color: aliceblue;
+        height: 40px;
+        font-size: 12px;
+        color: @black;
+        &:hover {
+          background: @white;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: @mobile-screen) {
+  .ant-row {
+    .ant-form-item-control-input {
+      width: 100%;
+    }
+    .ant-btn {
+      margin: 0px;
+    }
+  }
+}

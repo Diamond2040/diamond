@@ -1,0 +1,55 @@
+@import '../../../style/vars.less';
+
+#edit-form {
+  .form-container {
+    margin-top: 20px;
+
+    &:first-child {
+      margin-top: 0px;
+    }
+    .ant-form-item-control-input {
+      border-radius: 5px;
+      .ant-input {
+        background: #242424;
+        border-color: #242424;
+        color: #fff;
+      }
+      .ant-select-selector {
+        min-height: 40px;
+        height: auto;
+        border-radius: 5px;
+        .ant-select-selection-search {
+          display: inline-flex;
+          align-items: center;
+          input {
+            outline: none;
+            box-shadow: none!important;
+          }
+        }
+      }
+      .currency {
+        text-transform: uppercase;
+      }
+      .ant-picker {
+        height: 40px;
+        background: #242424;
+        border-color: #242424;
+        input {
+          box-shadow: none!important;
+        }
+      }
+      .ant-input-group-addon {
+        background: #242424;
+        border-color: #242424;
+      }
+      .ant-select-arrow {
+        color: #fff;
+      }
+    }
+  }
+}
+.ant-select-dropdown {
+  .select-currency {
+    text-transform: uppercase;
+  }
+}

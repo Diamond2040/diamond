@@ -1,0 +1,148 @@
+@import '../../../../style/vars.less';
+
+.performer-calendar {
+  margin: auto;
+  max-width: 860px;
+  background-color: @dark-gray3;
+  .ant-picker-calendar-mode-switch {
+    display: none;
+  }
+}
+.ant-picker-calendar-header {
+  margin-right: 10px;
+  background-color: @dark-gray3;
+
+  .ant-select-arrow {
+    color: @white;
+  }
+}
+
+.ant-picker-body {
+  background-color: @dark-gray3;
+}
+.ant-picker-calendar-full .ant-picker-panel .ant-picker-body th {
+  color: @white;
+}
+.ant-picker-calendar-full .ant-picker-panel .ant-picker-body th,
+.ant-picker-calendar-full .ant-picker-panel .ant-picker-body td {
+  &:hover {
+    .ant-picker-calendar-date-value {
+      color: black;
+    }
+  }
+}
+
+.ant-picker-calendar-full .ant-picker-panel .ant-picker-calendar-date-value {
+  color: @white;
+}
+
+.ant-picker-calendar-full .ant-picker-panel .ant-picker-calendar-date-content {
+  height: 45px;
+  ul.events {
+    padding: 0;
+    max-height: 100%;
+    overflow: auto;
+    margin: 0;
+
+    li {
+      padding-left: 10px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      position: relative;
+
+      &::before {
+        content: '';
+        width: 5px;
+        height: 5px;
+        position: absolute;
+        left: 0;
+        top: 7px;
+        border-radius: 50%;
+      }
+
+      &.success {
+        &::before {
+          background-color: @success-color;
+        }
+      }
+
+      &.error {
+        &::before {
+          background-color: @highlight-color;
+        }
+      }
+    }
+  }
+}
+
+.ant-picker-cell-in-view:not(.ant-picker-cell-disabled)>.ant-picker-cell-inner {
+  border-color: #eebd22 !important;
+  
+  &:hover {
+    color: @black;
+  }
+}
+
+.ant-picker-cell-in-view.ant-picker-cell-disabled>.ant-picker-cell-inner {
+  cursor: not-allowed;
+  pointer-events: auto;
+}
+.ant-picker-time-panel-column > li.ant-picker-time-panel-cell .ant-picker-time-panel-cell-inner {
+  color: black;
+}
+
+.schedule-modal-wrapper {
+  .ant-modal-content {
+    background: @white  !important;
+    
+    .ant-modal-title,
+    .text-center,
+    .ant-col,
+    label {
+      color: @black;
+    }
+    .ant-btn {
+      border-color: @main-background-color;
+    }
+
+    .anticon-ellipsis {
+      display: none;
+    }
+
+    .btn-mobile {
+      display: none;
+    }
+
+    .ant-input-number,
+    .ant-input {
+      background-color: transparent !important;
+      border: 1px solid #d9d9d9;
+      color: black;
+    }
+
+    input {
+      color: black;
+    }
+  }
+
+  @media screen and(max-width: @mobile-screen) {
+    .ant-modal-content {
+      .ant-row {
+        .ant-col {
+          display: block;
+
+          .btn-desktop {
+            display: none;
+          }
+
+          .anticon-ellipsis,
+          .btn-mobile,
+          .anticon-more {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

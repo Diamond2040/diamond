@@ -1,0 +1,78 @@
+@import '../../../style/vars.less';
+
+.messenger {
+  display: flex;
+  width: 100%;
+  height: 70vh;
+  position: relative;
+  margin: 25px 0 75px;
+}
+
+.scrollable {
+  position: relative;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.sidebar {
+  display: flex;
+  width: 40%;
+  .conversation-list {
+    background: @black;
+    .conversation-title, .conversation-snippet {
+      color: #666;
+    }
+  }
+}
+
+.chat-content {
+  background: #666;
+  display: flex;
+  width: 60%;
+  padding: 20px 0;
+  position: relative;
+  padding-top: 60px;
+  .mess-recipient {
+    margin-top: 5px;
+    background-color: gray;
+  }
+  .message {
+    .bubble {
+      color: #666 !important;
+      background: #e3e3e3 !important;
+    }
+    .timestamp {
+      color: @white;
+      font-size: 10px;
+    }
+  }
+  .compose {
+    border-bottom: 1px solid #e3e3e3;
+    border-top: 1px solid #e3e3e3;
+    border-right: 1px solid #e3e3e3;
+    border-left: 1px solid #e3e3e3;
+    .grp-send {
+      border-radius: 5px;
+    }
+  }
+}
+
+.footer {
+  background: @white;
+}
+
+@media all and (max-width: @mobile-screen) {
+  .sidebar {
+    width: 100%;
+  }
+  .sidebar.active {
+    display: none;
+  }
+  .chat-content {
+    width: 100%;
+    display: none;
+  }
+  .chat-content.active {
+    display: flex;
+  }
+}
